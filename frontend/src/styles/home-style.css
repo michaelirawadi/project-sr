@@ -1,0 +1,221 @@
+body {
+  font-family: Arial, sans-serif;
+  /* background-color: #f1f1f1; */
+  background-color: #222222;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  /* width: 100%; */
+  /* min-width: 720px; */
+  /* max-width: 1000px; */
+  width: 1000px;
+  background: #222222;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  /* border-bottom: 1px solid #ccc; */
+}
+
+.message {
+  margin: 10px 0;
+}
+
+.message.user {
+  text-align: right;
+  color: white;
+  text-transform: capitalize;
+  background-color: #0e2a48;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.message.bot {
+  text-align: left;
+  color: black;
+  text-transform: capitalize;
+  background-color: #c9c9ca;
+  width: fit-content;
+  margin-left: 1rem;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.input-area button {
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background: #0056b3;
+}
+
+#user-input {
+  border-bottom-left-radius: 10px;
+  /* border-bottom-right-radius: 1rem; */
+}
+
+#btn-input {
+  /* border-bottom-left-radius: 1rem; */
+  border-bottom-right-radius: 10px;
+}
+
+/* =========================================================================== */
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  /* background-color: #fff; */
+  background-color: #333333;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mic-toggle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: crimson;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.mic-toggle:after,
+.mic-toggle:before {
+  --pad: 0rem;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(220, 20, 60, 0.2);
+  top: var(--pad);
+  left: var(--pad);
+  right: var(--pad);
+  bottom: var(--pad);
+  border-radius: 50%;
+}
+
+.mic-toggle:after {
+  transition: 0.4s;
+}
+
+.mic-toggle:before {
+  transition: 0.2s;
+}
+
+.mic-toggle:hover:before {
+  --pad: -0.75rem;
+}
+
+.mic-toggle:hover:after {
+  --pad: -1.5rem;
+}
+
+.mic-toggle span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2.25rem;
+}
+
+.mic-toggle.is-recording:after {
+  animation: smoothPadAfter 0.6s ease-in alternate-reverse forwards infinite;
+}
+
+.mic-toggle.is-recording:before {
+  animation: smoothPadBefore 0.6s ease-in alternate-reverse forwards infinite;
+}
+
+@keyframes smoothPadAfter {
+  0% {
+    top: -2rem;
+    left: -2rem;
+    right: -2rem;
+    bottom: -2rem;
+  }
+  100% {
+    top: -1rem;
+    left: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+  }
+}
+
+@keyframes smoothPadBefore {
+  0% {
+    top: -1rem;
+    left: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+  }
+  100% {
+    top: -0.5rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    bottom: -0.5rem;
+  }
+}
+
+.playback {
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+}
+
+.is-hidden {
+  display: none;
+}
